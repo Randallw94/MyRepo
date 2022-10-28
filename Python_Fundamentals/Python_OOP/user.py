@@ -2,24 +2,32 @@ class User:
     
     def __init__(self, name):
         self.name = name
-        self.amount = 0
+        self.balance = 0
     
     # have this method increase the user's balance by the amount specified
     def make_deposit(self, amount):
-        self.amount += amount
+        self.balance += amount
     
     # have this method decrease the user's balance by the amount specified
     def make_withdrawal(self, amount):
-        self.amount -= amount
+        self.balance -= amount
     
     # have this method print the user's name and account balance to the terminal
     # eg. "User: Guido van Rossum, Balance: $150
     def display_user_balance(self):
-        print(f'Name: {self.name} | Balance: ${self.amount}')
+        print(f'Name: {self.name} | Balance: ${self.balance}')
     
     # have this method decrease the user's balance by the amount and add that amount to other other_user's balance
     def transfer_money(self, other_user, amount):
-        pass
+        self.balance -= amount
+        self.other_user += amount
+        
+    # BONUS: Add a transfer_money method; have the first user transfer money to the third user and then print both users' balances
+    def transfer_money(self,other_user,amount):
+        self.balance -= amount
+        other_user.balance += amount
+        self.display_user_balance()
+        other_user.display_user_balance()
     
 # Create 3 instances of the User class
 user1 = User("James")
@@ -47,4 +55,4 @@ user3.make_withdrawal(100)
 user3.make_withdrawal(100)
 user3.display_user_balance()
 
-# BONUS: Add a transfer_money method; have the first user transfer money to the third user and then print both users' balances
+user1.transfer_money(user2,1000)
