@@ -7,4 +7,5 @@ class Ninja:
         self.pet_food = pet_food
         
 class Pet:
-    pass
+    def __init__(self,name,type,tricks,health,energy):
+        pass
