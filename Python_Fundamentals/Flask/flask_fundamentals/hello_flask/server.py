@@ -9,6 +9,12 @@ app = Flask(__name__)
 def hello_world():
     # Return the string 'Hello World!' as a response
     return 'Hello World!'
+
+@app.route('/success')
+def success():
+    # return a sucess message after the index route
+    return 'Success'
+
 # Ensure this file is being run directly and not from a different module
 if __name__ == '__main__':
     # Run the app in debug mode.
