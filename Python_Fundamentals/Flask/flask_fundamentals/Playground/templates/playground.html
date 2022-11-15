@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    h1{
+        text-align:center;
+    }
+    .box{
+        display:flex;
+        justify-content:space-evenly;
+        flex-wrap: wrap;
+    }
+    .square {
+        border:1px solid black;
+        height:150px;
+        width:150px;
+    }
+
+    p{
+        text-align:center;
+    }
+</style>
+<body>
+    <h1>{{message}}</h1>
+    <div class="box">
+    {% for i in range(number): %}
+        <p class="square"style="background-color: {{color}};"></p>
+    {% endfor %}
+    </div>
+    <div>
+        <p>The are a total of {{number}} boxes to display</p>
+    </div>
+</body>
+</html>
