@@ -59,10 +59,10 @@ class BankAccount():
             account.display_account_info()
     
 # Create 2 accounts
-savings = BankAccount(.01)
+savings = BankAccount(.01, 0) 
 checking = BankAccount(.01, 100)
 
 # To the first account, make 3 deposits and 1 withdrawal, then yield interest and display the account's info all in one line of code (i.e. chaining)
-savings.deposit(10).deposit(20).deposit(40).withdraw(600).yield_interest()
+savings.deposit(10)
 
 BankAccount.all_accounts()
