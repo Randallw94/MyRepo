@@ -9,20 +9,21 @@
     <title>My First Vue</title>
 </head>
 <body>
-    <h1 id="name">{{ name }}'s List of Things to Learn</h1>
-    <ul>
-        <li>HTML</li>
-        <li>JavaScript</li>
-        <li>Python</li>
-        <li>Java</li>
-        <li>C</li>
-        <li>C++</li>
-        <li>C#</li>
-        <li>Go</li>
-        <li>R</li>
-        <li>Swift</li>
-        <li>PHP</li>
-    </ul>
+    <div id="app">
+        <div class="top">
+            <h1>{{ name }}'s List of Things to Learn</h1>
+            <h2 v-if="showMe === true" >Tech</h2>
+            <p v-for="language in tech_courses">
+                {{ language }}
+            </p>
+        </div>
+        <div class="bottom">
+            <h2 v-if="showMe === false">Financial</h2>
+            <p v-for="finance in finances">
+                {{ finance }}
+            </p>
+        </div>
+    </div>
     <script src="index.js"></script>
 </body>
 </html>
