@@ -4,17 +4,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dictionary Entry</title>
+    <title>Registration Form</title>
 </head>
 <body>
-    <h1>ninja</h1>
-    <img src="https://s3.amazonaws.com/General_V88/boomyeah2015/codingdojo/curriculum/content/chapter/pronunciation.png" alt="pronunciation ">
-    <em><p>noun</p></em>
-    <ol>
-        <b>
-            <li>A practitioner skilled in the Japanese art of ninjtsu</li>
-            <li>A programmer who breaks down problems with zen-like focus.</li>
-        </b>
-    </ol>
+    <h1>Registration Form</h1>
+    <div>
+        <label for="firstName">First Name</label>
+        <input type="text" alt="firstName" >
+    </div>
+    <div>
+        <label for="lastName">Last Name:</label>
+        <input type="text" alt="lastName" >
+    </div>
+    <div>
+        <label for="email">Email:</label>
+        <input type="email" alt="email" >
+    </div>
+    <div>
+        <label for="password">Password:</label>
+        <input type="password" alt="password" >
+    </div>
+    <div>
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" alt="confirmPassword" >
+    </div>
+    <div>
+        <label for="birthDate">Birthday:</label>
+        <input type="date" alt="birthDate" >
+    </div>
+    <div>
+        <label for="gender">Gender Identity:</label>
+        <input type="radio" alt="gender" value="male">
+        <label for="male">Male:</label>
+        <input type="radio" alt="gender" value="female">
+        <label for="female">Female:</label>
+    </div>
+        <label for="description">A short description about myself:</label>
+    <div>
+        <textarea name="description" id="" cols="30" rows="5"></textarea>
+    </div>
+    <div>
+        <label for="language">Favorite Language:</label>
+        <select>
+            <option>JavaScript</option>
+            <option>Java</option>
+            <option>Python</option>
+        </select>
+    </div>
+    <div>
+        <input type="checkbox"/>
+        <label for="updates">Yes, I would like to receive periodic email updates</label>
+    </div>
+    <div>
+        <button>Create Account</button>
+    </div>
 </body>
 </html>
